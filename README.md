@@ -1,0 +1,3 @@
+# Database Management Systems Course Project - DC metro food map
+
+Our web application is designed to help users quickly discover high-quality restaurants nearby metro stations in the Washington Metropolitan Area. By leveraging data from Google Maps and Yelp, we offer a comprehensive database of restaurants in the area, complete with reviews and ratings from real customers. Our intuitive platform enables users to easily filter and sort their search results based on a variety of criteria, including price level and customer rating. Additionally, our application provides users with the ability to sort reviews by both rating and time. With our user-friendly interface and robust data set, finding great restaurants in the Washington Metropolitan Area has never been easier!

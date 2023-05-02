@@ -1,0 +1,41 @@
+version: "3.8"
+services:
+  food-map-database:
+    image: food-map-database:latest
+    container_name: food-map-database
+    networks:
+      - fm-network
+    ports:
+      - "5432:5432"
+
+  food-map-api:
+    image: food-map-api:latest
+    container_name: food-map-api
+    networks:
+      - fm-network
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./logs:/opt/food-map-api/logs
+    depends_on:
+      - food-map-database
+
+  food-map-data-collector:
+    image: food-map-data-collector:latest
+    container_name: food-map-data-collector
+    environment:
+      - DB_HOSTNAME=food-map-database
+    networks:
+      - fm-network
+    volumes:
+      - ./logs:/opt/food-map-data-collector/logs
+    depends_on:
+      - food-map-database
+
+networks:
+  fm-network:
+    name: fm-network
+    ipam:
+      driver: default
+      config:
+        - subnet: "10.1.0.0/16"

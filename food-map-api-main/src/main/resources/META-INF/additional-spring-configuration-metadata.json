@@ -1,0 +1,79 @@
+{
+  "properties": [
+    {
+      "name": "food-map-api.jwtauth.token.secret",
+      "type": "java.lang.String",
+      "description": "The secret used to encode the JWT tokens."
+    },
+    {
+      "name": "food-map-api.jwtauth.token.expiration",
+      "type": "java.lang.Long",
+      "description": "The duration in milliseconds that the token is valid for."
+    },
+    {
+      "name": "food-map-api.error-messages.not-found-by-username",
+      "type": "java.lang.String",
+      "description": "Error message when the Account cannot be found by username."
+    },
+    {
+      "name": "food-map-api.error-messages.not-found-by-role-value",
+      "type": "java.lang.String",
+      "description": "Error message when the Role cannot be found by value."
+    },
+    {
+      "name": "food-map-api.error-messages.not-found-by-line-code",
+      "type": "java.lang.String",
+      "description": "Error message when the Metro Line cannot be found by line code."
+    },
+    {
+      "name": "food-map-api.error-messages.not-found-by-stationID",
+      "type": "java.lang.String",
+      "description": "Error message when the Metro Station cannot be found by stationID."
+    },
+    {
+      "name": "food-map-api.error-messages.not-found-by-station-code",
+      "type": "java.lang.String",
+      "description": "Error message when the Metro Station cannot be found by station code."
+    },
+    {
+      "name": "food-map-api.error-messages.not-found-by-restaurantID",
+      "type": "java.lang.String",
+      "description": "Error message when the Restaurant cannot be found by restaurantID."
+    },
+    {
+      "name": "food-map-api.error-messages.invalid-username",
+      "type": "java.lang.String",
+      "description": "Error message when the user sent an invalid username."
+    },
+    {
+      "name": "food-map-api.error-messages.invalid-email",
+      "type": "java.lang.String",
+      "description": "Error message when the user sent an invalid email."
+    },
+    {
+      "name": "food-map-api.error-messages.missing-password",
+      "type": "java.lang.String",
+      "description": "Error message when the user sent a missing password."
+    },
+    {
+      "name": "food-map-api.error-messages.taken-username",
+      "type": "java.lang.String",
+      "description": "Error message when the user sent an username that is already used by another account."
+    },
+    {
+      "name": "food-map-api.error-messages.taken-email",
+      "type": "java.lang.String",
+      "description": "Error message when the user sent an email that is already used by another account."
+    },
+    {
+      "name": "food-map-api.error-messages.bad-credentials",
+      "type": "java.lang.String",
+      "description": "Error message when the user provides a bad username or password."
+    },
+    {
+      "name": "food-map-api.error-messages.failed-authentication",
+      "type": "java.lang.String",
+      "description": "Error message when the authentication of the user failed."
+    }
+  ]
+}

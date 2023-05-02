@@ -1,0 +1,10 @@
+# Postgres Database in Docker Compose Network
+spring:
+  datasource:
+    url: jdbc:postgresql://food-map-database:5432/foodmapdb
+  jpa:
+    show-sql: false
+
+logging:
+  file:
+    name: /opt/food-map-api/logs/food-map-api.log

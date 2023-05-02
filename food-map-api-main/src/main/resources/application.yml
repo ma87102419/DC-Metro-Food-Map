@@ -1,0 +1,41 @@
+# Postgres Database
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/foodmapdb
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+    hibernate:
+      ddl-auto: validate # (options: create, create-drop, validate (for prod), update)
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+logging:
+  file:
+    name: ./logs/food-map-api.log
+
+food-map-api:
+  jwtauth:
+    token:
+      # Keeping this plain text for this school project since this app won't affect real people
+      secret: "635266556A586E3272357538782F413F4428472B4B6150645367566B5970337336763979244226452948404D6351655468576D5A7134743777217A25432A462D"
+      expiration: 900000 # 300000 = 5 mins
+  error-messages:
+    not-found-by-username: "Account was not found with username: "
+    not-found-by-role-value: "Role was not found with value: "
+    not-found-by-line-code: "Metro Line not found with lineCode: "
+    not-found-by-stationID: "Metro Station not found with stationID: "
+    not-found-by-station-code: "Metro Station not found with stationCode: "
+    not-found-by-restaurantID: "Restaurant not found with restaurantID: "
+    invalid-username: "Username must be between 4 and 16 characters long inclusively and only contain letters, numbers, or underscores"
+    invalid-email: "Email must be a valid email address"
+    missing-password: "Password was not given"
+    taken-username: "Username is already taken"
+    taken-email: "Email is already taken"
+    bad-credentials: "Username or Password is wrong"
+    failed-authentication: "Authentication Failed"
